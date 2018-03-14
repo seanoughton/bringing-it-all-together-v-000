@@ -108,11 +108,12 @@ class Dog
   def update()
     #what record you want to update is the id, self.id
     sql = <<-SQL
-      UPDATE *
-      FROM dogs
-      WHERE id = ?
+      UPDATE dogs
+      name = ?,
+      breed = ?,
+      id = ?
     SQL
-    DB[:conn].execute(sql,self.id)
+    DB[:conn].execute(sql,self.name,self.breed,self.id)
     #the values you want to update are accessible by the instnace
 
   end
