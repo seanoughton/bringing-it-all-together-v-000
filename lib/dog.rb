@@ -80,8 +80,16 @@ class Dog
 
   def self.find_or_create_by(name:,breed:)
     #find out whether the dog is in the db, use name and breed
-    #if it is not in the db, create a new dog and save it to the db
+    #sql to find row by name and breed and return row
+    sql = <<-SQL
+      SELECT *
+      FROM dogs
+      WHERE name = ? AND breed = ?
+      LIMIT 1
+    SQL
     
+    #if it is not in the db, create a new dog and save it to the db
+
 
   end
 
