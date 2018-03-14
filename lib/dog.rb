@@ -65,7 +65,7 @@ class Dog
 
   def self.new_from_db(row)
     #instantiates an object
-    dog = self.new(id:row[0],name:row[1],breed:row[2])
+    dog = self.new(row[0],name:row[1],breed:row[2])
   end
 
   def self.find_by_id(id)
@@ -76,7 +76,7 @@ class Dog
       LIMIT 1
     SQL
     row = DB[:conn].execute(sql,id)
-    new_dog = self.new_from_db(id:2,name:row[1],breed:row[2])
+    new_dog = self.new_from_db(2,name:row[1],breed:row[2])
   end
 
 
