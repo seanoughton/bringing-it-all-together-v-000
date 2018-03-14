@@ -112,6 +112,7 @@ class Dog
       FROM dogs
       WHERE id = ?
     SQL
+    DB[:conn].execute(sql,self.id)
     #the values you want to update are accessible by the instnace
 
   end
