@@ -64,7 +64,7 @@ class Dog
   end
 
   def self.new_from_db(row_array)
-
+    #instantiates an object
   end
 
   def self.find_by_id(id)
