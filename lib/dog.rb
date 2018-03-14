@@ -86,7 +86,7 @@ class Dog
       LIMIT 1
     SQL
     row = DB[:conn].execute(sql,name)
-    self.new_from_db(row)
+    self.new_from_db(row.flatten)
 
   end
 
