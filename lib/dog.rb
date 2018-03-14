@@ -4,7 +4,7 @@ class Dog
   attr_reader :id
 
   def initialize (name:,breed:)
-    @id = nil
+    #@id = nil
     @name = name
     @breed = breed
   end
