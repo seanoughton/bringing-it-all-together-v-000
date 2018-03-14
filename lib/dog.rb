@@ -41,11 +41,9 @@ class Dog
 =end
 
   def save
-    #check to see if the id EXISTS
-    #add the instance to the database
-    if self.id
+    #if self.id
       puts "already has id"
-    else
+    #else
       sql = <<-SQL
         INSERT INTO dogs (name,breed) VALUES (?,?)
       SQL
@@ -54,7 +52,7 @@ class Dog
       DB[:conn].execute(sql).flatten.first
       self.id = DB[:conn].execute(sql).flatten.first
       self
-    end
+    #end
 
   end
 
@@ -106,7 +104,6 @@ class Dog
   end
 
   def update()
-    #what record you want to update is the id, self.id
     sql = <<-SQL
       UPDATE dogs set
       name = ?,
@@ -114,8 +111,6 @@ class Dog
       WHERE id = ?
     SQL
     DB[:conn].execute(sql,self.name,self.breed,self.id)
-    #the values you want to update are accessible by the instnace
-
   end
 
 
