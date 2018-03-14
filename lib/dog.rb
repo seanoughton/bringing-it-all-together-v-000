@@ -46,15 +46,16 @@ class Dog
     if self.id
       puts "already has id"
     else
+      sql = <<-SQL
+        INSERT INTO dogs (name,breed) VALUES (?,?)
+      SQL
+      DB[:conn].execute(sql,self.name,self.breed)
+      sql = "SELECT last_insert_rowid() FROM dogs"
+      DB[:conn].execute(sql).flatten.first
+      self.id = DB[:conn].execute(sql).flatten.first
+      self
     end
-    sql = <<-SQL
-      INSERT INTO dogs (name,breed) VALUES (?,?)
-    SQL
-    DB[:conn].execute(sql,self.name,self.breed)
-    sql = "SELECT last_insert_rowid() FROM dogs"
-    DB[:conn].execute(sql).flatten.first
-    self.id = DB[:conn].execute(sql).flatten.first
-    self
+
   end
 
   def self.create(name:,breed:)
