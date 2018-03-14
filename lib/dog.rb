@@ -49,7 +49,8 @@ class Dog
       INSERT INTO dogs (name,breed) VALUES (?,?)
     SQL
     DB[:conn].execute(sql,self.name,self.breed)
-    sql = "SELECT last_insert_rowid() FROM dogs".flatten[0]
+    sql = "SELECT last_insert_rowid() FROM dogs"
+    DB[:conn].execute(sql).flatten.first
     self.id = sql
     self
   end
