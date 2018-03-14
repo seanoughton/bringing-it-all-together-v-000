@@ -35,9 +35,8 @@ class Dog
       sql = "SELECT last_insert_rowid() FROM dogs"
       DB[:conn].execute(sql).flatten.first
       self.id = DB[:conn].execute(sql).flatten.first
-      self
     end
-
+      self
   end
 
   def self.create(name:,breed:)
