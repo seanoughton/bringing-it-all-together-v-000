@@ -79,7 +79,7 @@ class Dog
   end
 
   def self.find_or_create_by(name:,breed:)
-    #find out whether the dog is in the db
+    #find out whether the dog is in the db, use name and breed
     #if it is not in the db, create a new dog and save it to the db
     
 
