@@ -107,6 +107,11 @@ class Dog
 
   def update()
     #what record you want to update is the id, self.id
+    sql = <<-SQL
+      UPDATE *
+      FROM dogs
+      WHERE id = ?
+    SQL
     #the values you want to update are accessible by the instnace
 
   end
