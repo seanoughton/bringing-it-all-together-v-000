@@ -9,7 +9,7 @@ class Dog
   end
 
   def self.create_table
-    sql = "CREATE TABLE dogs"
+    sql = "CREATE TABLE IF NOT EXITS dogs"
   end
 
   def self.drop_table
