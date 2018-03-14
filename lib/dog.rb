@@ -44,6 +44,7 @@ class Dog
     #check to see if the id EXISTS
     #add the instance to the database
     if self.id
+      puts "already has id"
     else
     end
     sql = <<-SQL
