@@ -107,7 +107,7 @@ class Dog
 
   def update()
     #what record you want to update
-    #the values you want to update
+    #the values you want to update are accessible by the instnace
 
   end
 
