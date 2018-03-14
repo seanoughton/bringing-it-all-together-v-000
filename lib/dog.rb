@@ -25,21 +25,6 @@ class Dog
     DB[:conn].execute(sql)
   end
 
-=begin
-  def new_from_db
-    #get the rows from the database
-    #instantiate a new instance for each row, passing in the appropriate params
-    sql = <<-SQL
-      SELECT * FROM dogs
-    SQL
-
-    rows = DB[:conn].execute(sql)
-    rows.each do |row|
-      Dog.new()
-    end
-  end
-=end
-
   def save
     if self.id
       self.update
