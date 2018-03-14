@@ -4,8 +4,6 @@ class Dog
   attr_reader :id
 
   def initialize (arguments)
-    @id = id
-    @name = name
-    @grade = grade
+    attributes.each {|key,value| self.send(("#{key}="),value)}
   end
 end
