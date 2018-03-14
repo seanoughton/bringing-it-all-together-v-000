@@ -67,7 +67,7 @@ class Dog
       SELECT * FROM dogs WHERE id = ?
     SQL
     row = DB[:conn].execute(sql,id)
-    self.create()
+    #self.create()
 
   end
 
