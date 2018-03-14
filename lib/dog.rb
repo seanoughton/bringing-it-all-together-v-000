@@ -60,6 +60,14 @@ class Dog
   end
 
   def self.find_by_id(id)
+    #query the database and return the row associated with the id
+    #turn that row into a dog instance
+
+    sql = <<-SQL
+      INSERT INTO dogs (name,breed) VALUES (?,?)
+    SQL
+    DB[:conn].execute(sql)
+
   end
 
 
