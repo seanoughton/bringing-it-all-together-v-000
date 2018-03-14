@@ -71,7 +71,7 @@ class Dog
       LIMIT 1
     SQL
     row = DB[:conn].execute(sql,id)
-    new_dog = self.create(name:row[1],breed:row[2])
+    new_dog = self.create(name:row[1],breed:row[2]).flatten.first
   end
 
 
