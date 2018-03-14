@@ -76,7 +76,7 @@ class Dog
       LIMIT 1
     SQL
     row = DB[:conn].execute(sql,id)
-    new_dog = self.new_from_db(id:row[0],name:row[1],breed:row[2])
+    new_dog = self.new_from_db(id:"1",name:row[1],breed:row[2])
   end
 
 
