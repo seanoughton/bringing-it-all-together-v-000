@@ -79,8 +79,6 @@ class Dog
   end
 
   def self.find_or_create_by(name:,breed:)
-    #find out whether the dog is in the db, use name and breed
-    #sql to find row by name and breed and return row
     sql = <<-SQL
       SELECT *
       FROM dogs
@@ -88,7 +86,6 @@ class Dog
       LIMIT 1
     SQL
     row = DB[:conn].execute(sql,name,breed)
-    #if it is not in the db, create a new dog and save it to the db
     if row
       self.find_by_id(row[0][0])
     else
