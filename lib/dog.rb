@@ -6,6 +6,6 @@ class Dog
   def initialize (attributes)
     #attributes.each {|key,value| self.send(("#{key}="),value)}
     @name = name
-    @breed = :breed
+    @breed = breed
   end
 end
