@@ -89,6 +89,9 @@ class Dog
     SQL
     row = DB[:conn].execute(sql,name,breed)
     #if it is not in the db, create a new dog and save it to the db
+    if row
+    else
+    end
 
 
   end
