@@ -54,7 +54,7 @@ class Dog
       DB[:conn].execute(sql).flatten.first
       self.id = DB[:conn].execute(sql).flatten.first
       self
-    end
+    #end
 
   end
 
