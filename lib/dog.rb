@@ -46,11 +46,7 @@ class Dog
     #add the instance to the database
     #if self.id
     sql = <<-SQL
-      CREATE TABLE IF NOT EXISTS dogs (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT,
-        breed TEXT
-      )
+      INSERT INTO dogs 
     SQL
 
     DB[:conn].execute(sql)
