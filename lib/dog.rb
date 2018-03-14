@@ -30,10 +30,10 @@ class Dog
     #get the rows from the database
     #instantiate a new instance for each row, passing in the appropriate params
     sql = <<-SQL
-      SELECT * FROM dogs 
+      SELECT * FROM dogs
     SQL
 
-    DB[:conn].execute(sql)
+    rows = DB[:conn].execute(sql)
   end
 
   def save
