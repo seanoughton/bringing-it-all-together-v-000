@@ -78,6 +78,9 @@ class Dog
     new_dog = self.new_from_db(row.flatten)
   end
 
+  def find_by_name
+  end
+
   def self.find_or_create_by(name:,breed:)
     sql = <<-SQL
       SELECT *
@@ -91,8 +94,6 @@ class Dog
     else
       self.create(name:name, breed:breed)
     end
-
-
   end
 
 
