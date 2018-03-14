@@ -44,7 +44,16 @@ class Dog
   def save
     #check to see if the id EXISTS
     #add the instance to the database
-    #if self.id 
+    #if self.id
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXISTS dogs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        breed TEXT
+      )
+    SQL
+
+    DB[:conn].execute(sql)
 
 
   end
