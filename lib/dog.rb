@@ -46,7 +46,7 @@ class Dog
     #add the instance to the database
     #if self.id
     sql = <<-SQL
-      INSERT INTO dogs (name,breed) VALUES 
+      INSERT INTO dogs (name,breed) VALUES (?,?)
     SQL
 
     DB[:conn].execute(sql)
