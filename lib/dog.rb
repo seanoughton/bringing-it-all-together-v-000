@@ -36,10 +36,7 @@ class Dog
 
     rows = DB[:conn].execute(sql)
     rows.each do |row|
-      :id=>"test"
-      :name=>"test"
-      :breed=>"test"
-      Dog.new(:id,:name,:breed)
+      Dog.new(:id row[0],:name row[1],:breed row[2])
     end
   end
 
