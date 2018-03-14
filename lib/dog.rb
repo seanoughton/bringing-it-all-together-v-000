@@ -106,6 +106,8 @@ class Dog
   end
 
   def update()
+    #what record you want to update
+    #the values you want to update
 
   end
 
