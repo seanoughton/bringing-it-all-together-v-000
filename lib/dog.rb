@@ -44,6 +44,8 @@ class Dog
     #check to see if the id EXISTS
     #add the instance to the database
     if self.id
+    else
+    end
     sql = <<-SQL
       INSERT INTO dogs (name,breed) VALUES (?,?)
     SQL
