@@ -34,6 +34,9 @@ class Dog
     SQL
 
     rows = DB[:conn].execute(sql)
+    rows. each do |row|
+      Dogs.new()
+    end
   end
 
   def save
