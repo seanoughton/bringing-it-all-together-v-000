@@ -64,9 +64,9 @@ class Dog
     #turn that row into a dog instance
 
     sql = <<-SQL
-      INSERT INTO dogs (name,breed) VALUES (?,?)
+      SELECT * FROM dogs WHERE id = ?
     SQL
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql,id)
 
   end
 
