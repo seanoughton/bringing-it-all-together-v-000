@@ -110,7 +110,7 @@ class Dog
     sql = <<-SQL
       UPDATE dogs set
       name = ?,
-      breed = ?,
+      breed = ?
       WHERE id = ?
     SQL
     DB[:conn].execute(sql,self.name,self.breed,self.id)
