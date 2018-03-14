@@ -86,7 +86,7 @@ class Dog
       LIMIT 1
     SQL
     row = DB[:conn].execute(sql,name,breed)
-    if row #if there is row for that dog in the db
+    if row.empty? #if there is row for that dog in the db
       self.find_by_id(row[0][0])
     else
       self.create(name:name, breed:breed)
