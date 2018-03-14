@@ -91,7 +91,6 @@ class Dog
     #if it is not in the db, create a new dog and save it to the db
     if row
       self.create(:name,:breed)
-    else
     end
 
 
