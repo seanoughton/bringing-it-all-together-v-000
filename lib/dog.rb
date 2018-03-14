@@ -43,9 +43,9 @@ class Dog
   def save
     #check to see if the id EXISTS
     #add the instance to the database
-    if self.id
-      puts "already has id"
-    else
+    #if self.id
+      #puts "already has id"
+    #else
       sql = <<-SQL
         INSERT INTO dogs (name,breed) VALUES (?,?)
       SQL
