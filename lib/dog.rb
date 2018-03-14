@@ -29,7 +29,10 @@ class Dog
   def new_from_db
     #get the rows from the database
     #instantiate a new instance for each row, passing in the appropriate params
-    
+    sql = <<-SQL
+      SELECT * FROM dogs 
+    SQL
+
     DB[:conn].execute(sql)
   end
 
