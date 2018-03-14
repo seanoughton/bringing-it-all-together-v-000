@@ -50,7 +50,7 @@ class Dog
     DB[:conn].execute(sql,self.name,self.breed)
     sql = "SELECT last_insert_rowid() FROM dogs"
     DB[:conn].execute(sql).flatten.first
-    self.id = sql
+    self.id = DB[:conn].execute(sql).flatten.first
     self
   end
 
