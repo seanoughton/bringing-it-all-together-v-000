@@ -9,7 +9,13 @@ class Dog
   end
 
   def self.create_table
-    sql = "CREATE TABLE IF NOT EXITS dogs"
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXITS dogs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        breed TEXT
+      )
+    SQL
   end
 
   def self.drop_table
