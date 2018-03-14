@@ -43,7 +43,7 @@ class Dog
   def save
     #check to see if the id EXISTS
     #add the instance to the database
-    #if self.id
+    if self.id
     sql = <<-SQL
       INSERT INTO dogs (name,breed) VALUES (?,?)
     SQL
