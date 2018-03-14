@@ -63,7 +63,7 @@ class Dog
     new_dog.save
   end
 
-  def self.new_from_db(row_array)
+  def self.new_from_db(row)
     #instantiates an object
     dog = self.new(id:row[0],name:row[1],breed:row[2])
   end
