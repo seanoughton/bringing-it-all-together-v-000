@@ -42,6 +42,11 @@ class Dog
 =end
 
   def save
+    #check to see if the id EXISTS
+    #add the instance to the database
+    #if self.id 
+
+
   end
 
 
