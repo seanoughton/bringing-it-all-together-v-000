@@ -54,7 +54,7 @@ class Dog
     self
   end
 
-  def self.create(name:,breed:)
+  def self.create(name:,breed:,id:)
     new_dog = self.new(name:name, breed:breed)
     new_dog.save
   end
@@ -67,6 +67,7 @@ class Dog
       SELECT * FROM dogs WHERE id = ?
     SQL
     row = DB[:conn].execute(sql,id)
+    self.create()
 
   end
 
